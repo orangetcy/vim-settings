@@ -1,0 +1,36 @@
+[submodule "pack/vendor/start/nerdtree"]
+	path = pack/vendor/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/vendor/start/powerline"]
+	path = pack/vendor/start/powerline
+	url = https://github.com/powerline/powerline.git
+[submodule "pack/vendor/start/asyncrun.vim"]
+	path = pack/vendor/start/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "pack/vendor/start/syntastic"]
+	path = pack/vendor/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "pack/vendor/start/python-mode"]
+	path = pack/vendor/start/python-mode
+	url = https://github.com/python-mode/python-mode.git
+[submodule "pack/vendor/start/YouCompleteMe"]
+	path = pack/vendor/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "pack/vendor/start/python-imports.vim"]
+	path = pack/vendor/start/python-imports.vim
+	url = https://github.com/mgedmin/python-imports.vim.git
+[submodule "pack/vendor/start/ctrlsf.vim"]
+	path = pack/vendor/start/ctrlsf.vim
+	url = https://github.com/dyng/ctrlsf.vim.git
+[submodule "pack/vendor/start/vim-multiple-cursors"]
+	path = pack/vendor/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "pack/vendor/start/vim-indent-guides"]
+	path = pack/vendor/start/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "pack/vendor/start/nerdtree-git-plugin"]
+	path = pack/vendor/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "pack/vendor/start/vim-go"]
+	path = pack/vendor/start/vim-go
+	url = https://github.com/fatih/vim-go.git
