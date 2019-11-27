@@ -119,7 +119,7 @@ endfunc
 
 
 " File Scan
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.swap$'] "ignore files in NERDTree
 nnoremap <F3> :NERDTree <CR>
 " autocmd vimenter * NERDTree
 " show hidden files
