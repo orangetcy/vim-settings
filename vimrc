@@ -1,8 +1,13 @@
 " load vim plugins
-for name in systemlist('ls ~/.vim/pack/orange')
-    let path = '~/.vim/pack/vendor/'.name
-    execute 'set runtimepath+='.path
-endfor
+" for name in systemlist('ls ~/.vim/pack/orange')
+"     let path = '~/.vim/pack/vendor/'.name
+"     execute 'set runtimepath+='.path
+" endfor
+
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
 
 
 " ======================
@@ -86,11 +91,16 @@ EOF
 
 
 " Auto Complete
-let g:ycm_autoclose_preview_window_after_completion=1
+"let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_server_python_interpreter="/usr/bin/python3"
 let g:ycm_global_ycm_extra_conf = "/home/orange/.vim/pack/vendor/start/YouCompleteMe/.ycm_extra_conf.py"
 let g:ycm_key_invoke_completion='<c-z>'
 let g:pymode_rope_completion = 0  " close pymode complete
+let g:ycm_max_num_candidates = 0
+let g:ycm_filetype_blacklist = {
+  \ 'nerdtree': 1
+\ }
 " map <leader>q  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -119,7 +129,7 @@ endfunc
 
 
 " File Scan
-let NERDTreeIgnore=['\.pyc$', '\~$', '\.swap$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$'] "ignore files in NERDTree
 nnoremap <F3> :NERDTree <CR>
 " autocmd vimenter * NERDTree
 " show hidden files
@@ -197,6 +207,20 @@ let g:go_highlight_generate_tags = 1
 
 let g:godef_split=2
 
+
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
+
+
+" Colors
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+ else
+  colorscheme zenburn
+endif
+call togglebg#map("<F6>")
 
 
 set nu
