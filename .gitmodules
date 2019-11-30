@@ -37,9 +37,6 @@
 [submodule "pack/vendor/start/ale"]
 	path = pack/vendor/start/ale
 	url = https://github.com/dense-analysis/ale.git
-[submodule "pack/vendor/start/solarized"]
-	path = pack/vendor/start/solarized
-	url = https://github.com/altercation/solarized.git
 [submodule "pack/vendor/start/Zenburn"]
 	path = pack/vendor/start/Zenburn
 	url = https://github.com/jnurmine/Zenburn.git
