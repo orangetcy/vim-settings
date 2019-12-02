@@ -96,7 +96,6 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_server_python_interpreter="/usr/bin/python3"
 let g:ycm_global_ycm_extra_conf = "/home/orange/.vim/pack/vendor/start/YouCompleteMe/.ycm_extra_conf.py"
 let g:ycm_key_invoke_completion='<c-z>'
-"let g:pymode_rope_completion = 0  " close pymode complete
 let g:ycm_max_num_candidates = 0
 let g:ycm_filetype_blacklist = {
   \ 'nerdtree': 1
@@ -173,19 +172,6 @@ let g:indent_guides_guide_size=1
 
 " ctrlsf key
 nnoremap <Leader>sp :CtrlSF<CR>
-
-" python-mode setting
-" use python3 as default interpreter
-"let g:pymode_python = 'python3'
-" use PEP8 style indent
-"let g:pymode_indent = 1
-" use lint checkers
-"let g:pymode_lint_checkers = ['pyflakes', 'pep8']
-" open python all grammer highlight
-"let g:pymode_syntax = 1
-"let g:pymode_syntax_all = 1
-" highlight indent error
-"let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 
 
 "==============================================================================
