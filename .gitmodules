@@ -10,9 +10,6 @@
 [submodule "pack/vendor/start/syntastic"]
 	path = pack/vendor/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "pack/vendor/start/python-mode"]
-	path = pack/vendor/start/python-mode
-	url = https://github.com/python-mode/python-mode.git
 [submodule "pack/vendor/start/YouCompleteMe"]
 	path = pack/vendor/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
