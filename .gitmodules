@@ -7,9 +7,6 @@
 [submodule "pack/vendor/start/asyncrun.vim"]
 	path = pack/vendor/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
-[submodule "pack/vendor/start/syntastic"]
-	path = pack/vendor/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "pack/vendor/start/YouCompleteMe"]
 	path = pack/vendor/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git

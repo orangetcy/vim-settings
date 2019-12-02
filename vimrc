@@ -1,6 +1,7 @@
 " load vim plugins
-" for name in systemlist('ls ~/.vim/pack/orange')
-"     let path = '~/.vim/pack/vendor/'.name
+" for name in systemlist('ls ~/.vim/pack/vendor/start/')
+"     echo name
+"     let path = '~/.vim/pack/vendor/start'.name
 "     execute 'set runtimepath+='.path
 " endfor
 
@@ -194,16 +195,12 @@ let g:go_highlight_generate_tags = 1
 let g:godef_split=2
 
 
-" Load all of the helptags now, after plugins have been loaded.
-" All messages and errors will be ignored.
-silent! helptags ALL
-
-
 " Colors
 if has('gui_running')
   set background=dark
   colorscheme solarized
 else
+  set background=dark
   colorscheme zenburn
 endif
 call togglebg#map("<F6>")
@@ -219,4 +216,9 @@ set backspace=indent,eol,start
 " highlight current line/columns
 set cursorline
 "set cursorcolumn
+
+
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
 
