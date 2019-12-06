@@ -1,14 +1,18 @@
 " load vim plugins
-" for name in systemlist('ls ~/.vim/pack/vendor/start/')
-"     echo name
-"     let path = '~/.vim/pack/vendor/start'.name
-"     execute 'set runtimepath+='.path
-" endfor
+"for name in systemlist('ls ~/.vim/pack/vendor/start/')
+"    " echom name
+"    let path = '~/.vim/pack/vendor/start/'.name
+"    execute 'set runtimepath+='.path
+"endfor
 
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
+
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
 
 
 " ======================
@@ -32,10 +36,10 @@ highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
 
 " 使用 4 个空格，不使用 Tab
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set softtabstop=4
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab
+" set softtabstop=4
 
 "Code Indent
 au BufNewFile,BufRead *.py
@@ -200,7 +204,6 @@ if has('gui_running')
   set background=dark
   colorscheme solarized
 else
-  set background=dark
   colorscheme zenburn
 endif
 call togglebg#map("<F6>")
@@ -217,8 +220,7 @@ set backspace=indent,eol,start
 set cursorline
 "set cursorcolumn
 
-
-" Load all of the helptags now, after plugins have been loaded.
-" All messages and errors will be ignored.
-silent! helptags ALL
+"filetype on
+filetype plugin on
+filetype indent on
 
