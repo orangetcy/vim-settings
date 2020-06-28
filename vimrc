@@ -46,7 +46,7 @@ au BufNewFile,BufRead *.py
 \ set tabstop=4|
 \ set softtabstop=4|
 \ set shiftwidth=4|
-\ set textwidth=79|
+\ set textwidth=128|
 \ set expandtab|
 \ set autoindent|
 \ set fileformat=unix
@@ -99,7 +99,8 @@ EOF
 "let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_server_python_interpreter="/usr/bin/python3"
-let g:ycm_global_ycm_extra_conf = "/home/orange/.vim/pack/vendor/start/YouCompleteMe/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "/home/tcy/.vim/pack/vendor/start/YouCompleteMe/.ycm_extra_conf.py"
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_invoke_completion='<c-z>'
 let g:ycm_max_num_candidates = 0
 let g:ycm_filetype_blacklist = {
@@ -224,3 +225,9 @@ set cursorline
 filetype plugin on
 filetype indent on
 
+
+" Add to .vimrc to enable project-specific vimrc
+set exrc
+set secure
+" exrc allows loading local executing local rc files.
+" secure disallows the use of :autocmd, shell and write commands in local .vimrc files.
