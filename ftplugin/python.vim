@@ -8,3 +8,5 @@ let b:ale_fixers = ['autopep8', 'yapf']
 let b:ale_warn_about_trailing_whitespace = 0
 
 let b:ale_echo_msg_format = '[%linter%][%code%] %s [%severity%]'
+
+setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab textwidth=128 autoindent fileformat=unix

@@ -41,21 +41,57 @@ match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
 " set expandtab
 " set softtabstop=4
 
+"
+
+" base on indent or grammer folding
+"set foldmethod=indent
+set foldmethod=syntax
+" close fold code when start vim
+set nofoldenable
+
+" indent view
 "Code Indent
-au BufNewFile,BufRead *.py
-\ set tabstop=4|
-\ set softtabstop=4|
-\ set shiftwidth=4|
-\ set textwidth=128|
-\ set expandtab|
-\ set autoindent|
-\ set fileformat=unix
+" autocmd BufNewFile,BufRead *.py
+" \ set tabstop=4|
+" \ set softtabstop=4|
+" \ set shiftwidth=4|
+" \ set textwidth=128|
+" \ set expandtab|
+" \ set autoindent|
+" \ set fileformat=unix
+" 
+" autocmd BufNewFile,BufRead *.js, *.html, *.css *.cc *.cpp, *.h *.hpp *.c
+" \ set ts=2 sw=2 et autoindent fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
-\ set tabstop=2|
-\ set softtabstop=2|
-\ set shiftwidth=2
+" let g:indent_guides_enable_on_vim_startup=1
+" 从第二层开始可视化显示缩进
+set ts=2 sw=2 sts=2 et autoindent 
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+" 色块宽度
+let g:indent_guides_guide_size=1
+" 快捷键 i 开/关缩进可视化
+:nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
+
+" Google code style
+Glaive codefmt plugin[mappings]
+"Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VERSION-all-deps.jar"
+Glaive codefmt clang_format_style="Google"
+
+" augroup autoformat_settings
+"   autocmd FileType bzl AutoFormatBuffer buildifier
+"   autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
+"   autocmd FileType dart AutoFormatBuffer dartfmt
+"   autocmd FileType go AutoFormatBuffer gofmt
+"   autocmd FileType gn AutoFormatBuffer gn
+"   autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+"   autocmd FileType java AutoFormatBuffer google-java-format
+"   autocmd FileType python AutoFormatBuffer yapf
+"   "Alternative: autocmd FileType python AutoFormatBuffer autopep8
+"   autocmd FileType rust AutoFormatBuffer rustfmt
+"   autocmd FileType vue AutoFormatBuffer prettier
+" augroup END
 
 " 总是显示 DOS 格式文件中的 ^M
 set fileformats=unix
@@ -98,8 +134,8 @@ EOF
 " Auto Complete
 "let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_server_python_interpreter="/usr/bin/python3"
-let g:ycm_global_ycm_extra_conf = "/home/tcy/.vim/pack/vendor/start/YouCompleteMe/.ycm_extra_conf.py"
+" let g:ycm_server_python_interpreter="/usr/bin/python3"
+let g:ycm_global_ycm_extra_conf = "/home/galanz/.vim/pack/vendor/start/YouCompleteMe/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_invoke_completion='<c-z>'
 let g:ycm_max_num_candidates = 0
@@ -144,7 +180,7 @@ let NERDTreeMinimalUI=1
 " delete the buffer when delete its file
 let NERDTreeAutoDeleteBuffer=1
 " close nerdtree when close vim with one file
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd  bufenter * nested if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " git plug with nerdtree
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -158,22 +194,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
-
-
-" base on indent or grammer folding
-"set foldmethod=indent
-set foldmethod=syntax
-" close fold code when start vim
-set nofoldenable
-
-" indent view
-" let g:indent_guides_enable_on_vim_startup=1
-" 从第二层开始可视化显示缩进
-let g:indent_guides_start_level=2
-" 色块宽度
-let g:indent_guides_guide_size=1
-" 快捷键 i 开/关缩进可视化
-:nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
 
 " ctrlsf key
@@ -222,8 +242,7 @@ set cursorline
 "set cursorcolumn
 
 "filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 
 " Add to .vimrc to enable project-specific vimrc
