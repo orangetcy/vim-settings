@@ -16,9 +16,6 @@
 [submodule "pack/vendor/start/ctrlsf.vim"]
 	path = pack/vendor/start/ctrlsf.vim
 	url = https://github.com/dyng/ctrlsf.vim.git
-[submodule "pack/vendor/start/vim-multiple-cursors"]
-	path = pack/vendor/start/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "pack/vendor/start/vim-indent-guides"]
 	path = pack/vendor/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
@@ -46,3 +43,6 @@
 [submodule "pack/vendor/start/vim-glaive"]
 	path = pack/vendor/start/vim-glaive
 	url = https://github.com/google/vim-glaive.git
+[submodule "pack/vendor/start/vim-visual-multi"]
+	path = pack/vendor/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
